@@ -1,0 +1,1 @@
+this program can take recipes and prepare a grocery list for a number of weeks provided by the user.
