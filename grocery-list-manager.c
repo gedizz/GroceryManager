@@ -27,7 +27,19 @@ void readFile(recipe list[]);
 int main(int *argc, int argv[]) {
 
     recipe *book = malloc(sizeof(recipe));
+
+    int userInput;
+
+    // Start by reading the files current state
     readFile(book);
+
+    // Now that it's read, prompt user for menu
+    printf("-------- Grocery Manager --------\n");
+    printf("  1) Add a recipe\n");
+    printf("  2) Modify a recipe\n");
+    printf("  3) Print recipes\n");
+    printf("  4) Print grocery list\n");
+    
 
 
 
