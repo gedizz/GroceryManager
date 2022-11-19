@@ -16,7 +16,7 @@ typedef struct recipe {
 
 }recipe;
 
-void readFile(recipe list[], int numRecipes);
+void readFile(recipe list[]);
 //void addRecipe()
 //void printRecipes()
 //void removeRecipe()
@@ -26,13 +26,34 @@ void readFile(recipe list[], int numRecipes);
 
 int main(int *argc, int argv[]) {
 
+    recipe *book = malloc(sizeof(recipe));
+    readFile(book);
+
+
+
 
 
     return 0;
 }
 
+/* File Structure: 
 
-void readFile(recipe list[], int numRecipes) {
+Number recipes
+Recipe name
+number ingredients
+10g flour
+...
+...
+...
 
-    continue;
+
+*/
+
+void readFile(recipe list[]) {
+
+    FILE *ifp = fopen("recipes.txt", "r");
+
+    
+
+    exit(1);
 }
