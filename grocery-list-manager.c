@@ -17,11 +17,12 @@ typedef struct recipe {
 }recipe;
 
 void readFile(recipe list[]);
-//void addRecipe()
-//void printRecipes()
-//void removeRecipe()
-//void addIngredient()
-//void printGroceryList()
+//void addRecipe();
+//void modifyRecipe();
+//void printRecipes();
+//void removeRecipe();
+//void addIngredient();
+//void printGroceryList();
 
 
 int main(int *argc, int argv[]) {
@@ -39,6 +40,36 @@ int main(int *argc, int argv[]) {
     printf("  2) Modify a recipe\n");
     printf("  3) Print recipes\n");
     printf("  4) Print grocery list\n");
+    printf("  -1) Exit Program");
+    printf("Enter a command: ");
+
+    if (userInput == -1) {
+        printf("Exiting program\n");
+        exit(1);
+    }
+
+    else if (userInput == 1) {
+        // add recipe
+    }
+
+    else if (userInput == 2) {
+        // modify recipe
+    }
+
+    else if (userInput == 3) {
+        // print recipes
+    }
+
+    else if (userInput == 4) {
+        // print grocery list
+    }
+
+    else {
+        printf("Invalid input, exiting...\n");
+        exit(2);
+    }
+
+    scanf("%d", &userInput);
     
 
 
