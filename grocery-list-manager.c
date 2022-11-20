@@ -32,7 +32,7 @@ int main(int *argc, int argv[]) {
     int userInput;
 
     // Start by reading the files current state
-    readFile(book);
+    //readFile(book);
 
     // Now that it's read, prompt user for menu
     printf("-------- Grocery Manager --------\n");
@@ -40,8 +40,10 @@ int main(int *argc, int argv[]) {
     printf("  2) Modify a recipe\n");
     printf("  3) Print recipes\n");
     printf("  4) Print grocery list\n");
-    printf("  -1) Exit Program");
+    printf("  -1) Exit Program\n");
     printf("Enter a command: ");
+
+    scanf("%d", &userInput);
 
     if (userInput == -1) {
         printf("Exiting program\n");
@@ -69,7 +71,7 @@ int main(int *argc, int argv[]) {
         exit(2);
     }
 
-    scanf("%d", &userInput);
+    
     
 
 
@@ -95,7 +97,12 @@ number ingredients
 void readFile(recipe list[]) {
 
     FILE *ifp = fopen("recipes.txt", "r");
+    int numRecipes;
+    
+    // The first line is the number of recipes
+    fscanf(ifp, "%d", &numRecipes);
 
+    fclose(ifp);
     
 
     exit(1);
